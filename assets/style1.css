@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Death-Star;
+    src: url('../fonts/death-star/Death_Star.otf');
+}
+
+@font-face {
+    font-family: The_Dreamer;
+    src: url('../fonts/billy-argel_the-dreamer/THEDREAM_TRIAL.otf');
+}
+
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    display:block;
+    color:white;
+  
+    background-image:url(../images/sw1.jpg) ;
+    background-repeat: no-repeat;
+    background-size:cover;
+ 
+   
+}
+
+#mainHeading {
+	font-family: Death-Star, sans-serif;
+	text-align:center;
+	font-size: 80px;
+	text-shadow: 7px 7px 7px red;
+}
+
+.title {
+	text-align: center;
+	font-size: 50px;
+	font-family: The_Dreamer, sans-serif;
+	text-decoration: underline;
+}
+
+ #characters {
+    width:100%;
+    clear:both;
+    /* height:120px; */
+	/* display: inline-block; */
+} 
+
+/* .character {
+	font-family: aliens-and-cows, sans-serif;
+	font-size: 40px;
+	float: left;
+	text-align: center;
+	display:block;
+	width:200px;
+	margin: 20px ;
+} */
+
+.vs{
+    margin-top:60px;
+    background:black;
+    opacity: 5;
+}
+
+.image{
+    width: 250px;
+    height:180px;
+    /* float: left; */
+    margin-right:20px;
+    /* padding:20px; */
+    /* border:4px solid white; */
+   
+}
+
+.character {
+	font-family: calibri, sans-serif ;
+	font-size: 20px;
+	float: left;
+	text-align: center;
+	/* display:block;
+    width:200px; */
+    clear:all;
+    text-shadow: 4px 4px 4px red;
+	margin: 20px 0; 
+}
+
+.yourCharacter {
+	font-family: calibri, sans-serif ;
+	font-size: 20px;
+	clear:all;
+	text-align: center;
+	display:block;
+	width:250px;
+	margin: 10px auto;
+}
+
+
+.yourEnemy {
+	font-family: calibri, sans-serif ;
+	font-size: 20px;
+	clear:all;
+	text-align: center;
+	display:block;
+	width:250px;
+	margin: 10px auto;
+}
+
+
+.enemy {
+	font-family: aliens-and-cows, sans-serif;
+	font-size: 20px;
+	clear:all;
+	text-align: center;
+    /* display:inline-block; */
+    float:left;
+	width:200px;
+	margin: 10px 40px;
+
+}
