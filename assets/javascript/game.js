@@ -62,7 +62,7 @@ function selectFighter(){
             $(".fighters").css("margin-top" , "0px");
             $(".fighters").empty();
             $yourFighterDiv.empty();
-            $(".title").empty();
+            // $(".title").text(" ");
         
             $yourFighter.addClass('yourFighter');
         
@@ -99,12 +99,13 @@ function selectOpponent ()
         if(counter === fightersArr.length)
         {
             $(".title").text(" ");
+            $("#opponents").empty();
         }
 
         opponentSelected =true;
         $("#fightBtn").append('<button type="button" class="fightBtn">Attack</button>');
         // $(".fightBtn").animate({opacity: 1}, 700 );
-        setInterval(fightBlink ,500);
+        // setInterval(fightBlink ,500);
        
        
         opponentAttack = parseInt($yourOpponent.attr('data_attack'));
@@ -162,7 +163,9 @@ function restartGame()
         $(".fighters").empty();
         $("#opponents").empty();
         fighterSelected =false;
+        opponentSelected =false;
         fightersArr.splice($fighterNo,0, arrObj);
+        counter =0;
         constructGamePage();
         $(".msg").empty();
     });
@@ -177,38 +180,40 @@ function fight($yourFighter , $yourOpponent)
         opponentHealth = opponentHealth-fighterAttack;
         fighterHealth = fighterHealth - opponentAttack;
  
-        $(".fighterHealth").text(fighterHealth).animate({
-            fontSize: 35,
-            fontWeight: "bold",
-            color: '#FF0000'
-        }, 500, function() {
-            $(this).animate({
-                fontSize: 20,
-                color: 'white'
-            }, 500);
-        });
+        $(".fighterHealth").text(fighterHealth)
+        // .animate({
+        //     fontSize: 35,
+        //     fontWeight: "bold",
+        //     color: '#FF0000'
+        // }, 500, function() {
+        //     $(this).animate({
+        //         fontSize: 20,
+        //         color: 'white'
+        //     }, 500);
+        // });
        
 
-        $(".yourOpponent > .opponentHealth").text(opponentHealth).animate({
-            fontSize: 35,
-            color: '#FF0000'
-        }, 500, function() {
-            $(this).animate({
-                fontSize: 20,
-                color: 'white'
-            }, 500);
-        });
-      
+        $(".yourOpponent > .opponentHealth").text(opponentHealth)
+        // .animate({
+        //     fontSize: 35,
+        //     color: '#FF0000'
+        // }, 500, function() {
+        //     $(this).animate({
+        //         fontSize: 20,
+        //         color: 'white'
+        //     }, 500);
+        // });
+        $(".msg").css("color" , "white");
         $(".msg").text("Your fighter attacked " + opponentName + " for " + fighterAttack + " damage points.").css("font-size" ,"20px");
         $(".msg").append("<br>" + opponentName + " counter attacked your fighter for " + opponentAttack + " damage points.").css("font-size" ,"20px");
         
+        //win case
         if(opponentHealth <=0 )
-        {
-          $yourOpponentDiv.empty();
-          $("#fightBtn").empty();
-            $(".msg").text("Your fighter have defeated " +  opponentName+"." + " You can choose to find another opponent.");
-            opponentSelected =false;
-            if(counter === fightersArr.length)
+       {
+         $yourOpponentDiv.empty();
+         $("#fightBtn").empty();
+          
+           if(counter === fightersArr.length)
             { 
                 $("#mainHeading").css("font-size" ,"80px");
                 $(".fighters"). css("margin-top", "60px");
@@ -224,9 +229,14 @@ function fight($yourFighter , $yourOpponent)
                 $("#opponents").append('<button type="button" class="btn btn-lg btn-warning" id="restartBtn">Play Again!</button>');
                 restartGame();
               }
-         }
-        if(fighterHealth <=0 )
-        {
+              else{
+              $(".msg").text("Your fighter have defeated " +  opponentName+"." + " You can choose to find another opponent.");
+              opponentSelected =false;
+              }
+        } 
+            
+     else if(fighterHealth <=0 ) //loss case restart
+            {
             $("#mainHeading").css("font-size" ,"80px");
             $(".fighters"). css("margin-top", "60px");
                 $yourFighterDiv.empty();
@@ -243,7 +253,7 @@ function fight($yourFighter , $yourOpponent)
                  );
                 $("#opponents").append('<button type="button" class="btn btn-lg btn-warning" id="restartBtn">Play Again!</button>');
                 restartGame();
-       }
+       }  
      fighterAttack = fighterAttack + fighterbaseAtt;
     }
 };
@@ -272,7 +282,8 @@ function constructGamePage()
 
 //Creat UI when page loads.
 $(document).ready(function(){
-
+    var audio = new Audio("assets/audio/John Williams - Battle of the Heroes (Official Audio).mp3");
+   audio.play();
     constructGamePage();
 });
 
