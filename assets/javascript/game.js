@@ -205,8 +205,8 @@ function fight($yourFighter , $yourOpponent)
         //     }, 500);
         // });
         $(".msg").css("color" , "white");
-        $(".msg").text("Your fighter attacked " + opponentName + " for " + fighterAttack + " damage points.").css("font-size" ,"20px");
-        $(".msg").append("<br>" + opponentName + " counter attacked your fighter for " + opponentAttack + " damage points.").css("font-size" ,"20px");
+        $(".msg").text("You attacked " + opponentName + " for " + fighterAttack + " damage points.").css("font-size" ,"20px");
+        $(".msg").append("<br>" + opponentName + " counter attacked you for " + opponentAttack + " damage points.").css("font-size" ,"20px");
     }
         //win case
         if(opponentHealth <=0 )
@@ -231,7 +231,7 @@ function fight($yourFighter , $yourOpponent)
                 restartGame();
               }
               else{
-              $(".msg").text("Your fighter have defeated " +  opponentName+"." + " You can choose to find another opponent.");
+              $(".msg").text("You have defeated " +  opponentName+"." + " You can choose to find another opponent.");
               opponentSelected =false;
               }
             //   break;
