@@ -2,7 +2,7 @@ let kenobi = {
     fighterNo: 0,
     name: 'Obi-Wan Kenobi',
     health: 128,
-    attack: 8,
+    attack: 18,
     image: '<img src="assets/images/Obiwankenobi.jpg" class="image img-responsive">'
 };
 
@@ -11,7 +11,8 @@ let luke = {
     fighterNo: 1,
 name: 'Luke Skywalker',
 health: 100,
-attack: 2,
+//attack: 2,
+attack: 25,
 image: '<img src="assets/images/luke.jpg" class="image img-responsive">'
 };
 // derth sidious object
@@ -19,7 +20,8 @@ let sidious = {
     fighterNo: 2,
 name: 'Darth Sidious',
 health: 158,
-attack: 10,
+//attack: 10,
+attack: 15,
 image: '<img src="assets/images/darth_sidious.jpg" class="image img-responsive">'
 };
 // derth Maul
@@ -27,7 +29,8 @@ let maul = {
 fighterNo: 3,
 name: 'Darth Maul',
 health: 180,
-attack: 7,
+//attack: 7,
+attack: 12,
 image: '<img src="assets/images/derth_maul.jpg" class="image img-responsive">'
 };
 let fightersArr= [kenobi,luke,sidious,maul];
@@ -45,7 +48,7 @@ let opponentAttack = " " ;
 let opponentHealth = " " ;
 let fighterAttack = " ";
 let fighterHealth = " ";
-let fighterbaseAtt = 2 ;
+let fighterbaseAtt = 8 ;
 let opponentName = " " ;
 let btnAdded = false;
 let counter =0 ;
@@ -176,9 +179,10 @@ function fight($yourFighter , $yourOpponent)
 {   
     if (opponentSelected) 
     {
-       
+       if(opponentHealth >0 && fighterHealth >0){
         opponentHealth = opponentHealth-fighterAttack;
-        fighterHealth = fighterHealth - opponentAttack;
+        if(opponentHealth > 0 )
+        {fighterHealth = fighterHealth - opponentAttack;}
  
         $(".fighterHealth").text(fighterHealth)
         // .animate({
@@ -206,7 +210,7 @@ function fight($yourFighter , $yourOpponent)
         $(".msg").css("color" , "white");
         $(".msg").text("Your fighter attacked " + opponentName + " for " + fighterAttack + " damage points.").css("font-size" ,"20px");
         $(".msg").append("<br>" + opponentName + " counter attacked your fighter for " + opponentAttack + " damage points.").css("font-size" ,"20px");
-        
+    }
         //win case
         if(opponentHealth <=0 )
        {
@@ -233,6 +237,7 @@ function fight($yourFighter , $yourOpponent)
               $(".msg").text("Your fighter have defeated " +  opponentName+"." + " You can choose to find another opponent.");
               opponentSelected =false;
               }
+            //   break;
         } 
             
      else if(fighterHealth <=0 ) //loss case restart
