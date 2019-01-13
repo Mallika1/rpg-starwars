@@ -103,7 +103,16 @@ function selectOpponent ()
 
         opponentSelected =true;
         $("#fightBtn").append('<button type="button" class="fightBtn">Fight!</button>');
-
+        $(".fightBtn").animate({opacity: 1}, 700 );
+        $(".fightBtn").animate({
+            opacity: 1
+        }, 700, function() {
+            $(this).animate({
+                opacity: 0.3
+            }, 700);
+        });
+        // $(".fightBtn").fadeOut(250).fadeIn(250);
+        setInterval(blinker, 1000);
         opponentAttack = parseInt($yourOpponent.attr('data_attack'));
         opponentHealth = parseInt($yourOpponent.attr('data_health'));
         opponentName = $yourOpponent.attr('data_name');
@@ -136,6 +145,7 @@ function modifyUI ()
 
 $('#fightBtn').on('click', function() {
    
+    // $(this).fadeOut(250).fadeIn(250);
     fight($yourFighter , $yourOpponent);
    
 });
@@ -154,17 +164,17 @@ function restartGame()
      
 };
 
-
 function fight($yourFighter , $yourOpponent)
 {
     if (opponentSelected) 
     {
-        // $("#mainHeading").css("font-size" ,"60px");
+       
         opponentHealth = opponentHealth-fighterAttack;
         fighterHealth = fighterHealth - opponentAttack;
  
         $(".fighterHealth").text(fighterHealth).animate({
             fontSize: 25,
+            fontWeight: "bold",
             color: '#FF0000'
         }, 500, function() {
             $(this).animate({
@@ -174,7 +184,15 @@ function fight($yourFighter , $yourOpponent)
         });
        
 
-        $(".yourOpponent > .opponentHealth").text(opponentHealth);
+        $(".yourOpponent > .opponentHealth").text(opponentHealth).animate({
+            fontSize: 25,
+            color: '#FF0000'
+        }, 500, function() {
+            $(this).animate({
+                fontSize: 20,
+                color: 'blue'
+            }, 500);
+        });
       
         $(".msg").text("Your fighter attacked " + opponentName + " for " + fighterAttack + " damage points.").css("font-size" ,"20px");
         $(".msg").append("<br>" + opponentName + " counter attacked your fighter for " + opponentAttack + " damage points.").css("font-size" ,"20px");
@@ -228,7 +246,7 @@ function fight($yourFighter , $yourOpponent)
 function constructGamePage()
 {
     $(".fighters"). css("margin-top", "60px");
-    $(".fighters").append ( '<h3 class="title">Select Your Opponent</h3>');
+    $(".fighters").append ( '<h3 class="title">Select Your Fighter</h3>');
     for(let i =0; i<fightersArr.length; i++)
         {
          let $fighterDiv = $('<div class="fighter">');
