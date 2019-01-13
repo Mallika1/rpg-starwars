@@ -1,60 +1,57 @@
-let kenobi = {
-    fighterNo: 0,
-    name: 'Obi-Wan Kenobi',
-    health: 128,
-    attack: 18,
-    image: '<img src="assets/images/Obiwankenobi.jpg" class="image img-responsive">'
-};
+    let kenobi = {
+        fighterNo: 0,
+        name: 'Obi-Wan Kenobi',
+        health: 128,
+        attack: 18,
+        image: '<img src="assets/images/Obiwankenobi.jpg" class="image img-responsive">'
+    };
 
-//  luke
-let luke = {
+    //  luke
+    let luke = {
     fighterNo: 1,
-name: 'Luke Skywalker',
-health: 100,
-//attack: 2,
-attack: 25,
-image: '<img src="assets/images/luke.jpg" class="image img-responsive">'
-};
-// derth sidious object
-let sidious = {
+    name: 'Luke Skywalker',
+    health: 100,
+    attack: 30,
+    image: '<img src="assets/images/luke.jpg" class="image img-responsive">'
+    };
+    // derth sidious object
+    let sidious = {
     fighterNo: 2,
-name: 'Darth Sidious',
-health: 158,
-//attack: 10,
-attack: 15,
-image: '<img src="assets/images/darth_sidious.jpg" class="image img-responsive">'
-};
-// derth Maul
-let maul = {
-fighterNo: 3,
-name: 'Darth Maul',
-health: 180,
-//attack: 7,
-attack: 12,
-image: '<img src="assets/images/derth_maul.jpg" class="image img-responsive">'
-};
-let fightersArr= [kenobi,luke,sidious,maul];
+    name: 'Darth Sidious',
+    health: 158,
+    attack: 15,
+    image: '<img src="assets/images/darth_sidious.jpg" class="image img-responsive">'
+    };
+    // derth Maul
+    let maul = {
+    fighterNo: 3,
+    name: 'Darth Maul',
+    health: 180,
+    attack: 12,
+    image: '<img src="assets/images/derth_maul.jpg" class="image img-responsive">'
+    };
+    let fightersArr= [kenobi,luke,sidious,maul];
 
 
-let $yourFighterDiv = $('#yourfighter');
-let $yourFighter = "" ;
-let fighterSelected =false ;
-let opponentSelected =false;
-let $yourOpponentDiv = $('#youropponent');
-let  $yourOpponent = " "
+    let $yourFighterDiv = $('#yourfighter');
+    let $yourFighter = "" ;
+    let fighterSelected =false ;
+    let opponentSelected =false;
+    let $yourOpponentDiv = $('#youropponent');
+    let  $yourOpponent = " "
 
-//fight 
-let opponentAttack = " " ;
-let opponentHealth = " " ;
-let fighterAttack = " ";
-let fighterHealth = " ";
-let fighterbaseAtt = 8 ;
-let opponentName = " " ;
-let btnAdded = false;
-let counter =0 ;
-let $fighterNo = 0;
-let arrObj ;
-//select fighter
+    //fight 
+    let opponentAttack = " " ;
+    let opponentHealth = " " ;
+    let fighterAttack = " ";
+    let fighterHealth = " ";
+    let fighterbaseAtt = 6 ;
+    let opponentName = " " ;
+    let btnAdded = false;
+    let counter =0 ;
+    let $fighterNo = 0;
+    let arrObj ;
+    //select fighter
 
 function selectFighter(){
     $(".fighter").on("click", function()
