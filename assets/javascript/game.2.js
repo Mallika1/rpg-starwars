@@ -2,7 +2,8 @@ let kenobi = {
     fighterNo: 0,
     name: 'Obi-Wan Kenobi',
     health: 128,
-    attack: 8,
+    attack: 3,
+    random: 8,
     image: '<img src="assets/images/Obiwankenobi.jpg" class="image img-responsive">'
 };
 
@@ -11,7 +12,8 @@ let luke = {
     fighterNo: 1,
 name: 'Luke Skywalker',
 health: 100,
-attack: 2,
+attack: 5,
+random: 10,
 image: '<img src="assets/images/luke.jpg" class="image img-responsive">'
 };
 // derth sidious object
@@ -19,7 +21,8 @@ let sidious = {
     fighterNo: 2,
 name: 'Darth Sidious',
 health: 158,
-attack: 10,
+attack: 2,
+random: 7,
 image: '<img src="assets/images/darth_sidious.jpg" class="image img-responsive">'
 };
 // derth Maul
@@ -27,7 +30,8 @@ let maul = {
 fighterNo: 3,
 name: 'Darth Maul',
 health: 180,
-attack: 7,
+attack: 5,
+random: 5,
 image: '<img src="assets/images/derth_maul.jpg" class="image img-responsive">'
 };
 let fightersArr= [kenobi,luke,sidious,maul];

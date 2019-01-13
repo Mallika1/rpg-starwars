@@ -14,7 +14,8 @@ body {
     display:block;
     background-image:url(../images/cardbg.jpg) ;
     background-repeat: no-repeat;
-    background-size:cover;
+	background-size:cover;
+	color:white;
 }
 
 #mainHeading {
@@ -26,61 +27,76 @@ body {
 }
 
 .title {
-
-	font-size: 60px;
-	color:blue;
-	font-family: The_Dreamer, sans-serif;
-	text-decoration: underline;
-	text-shadow: 3px 3px 3px white;
+	font-family: Death-Star, sans-serif;
+	font-size: 30px;
+	color:white;
+	/* font-family: The_Dreamer, sans-serif; */
+	/* text-decoration: underline; */
+	text-shadow: 3px 3px 3px blue;
 }
 
 
 .fighterTitle{
-	font-size: 40px;
-	color:blue;
-	font-family: The_Dreamer, sans-serif;
-	text-decoration: underline;
-	text-shadow: 3px 3px 3px yellow;
+	font-size: 20px;
+	color:white;
+	font-family: Death-Star ,The_Dreamer, sans-serif;
+	/* text-decoration: underline; */
+	text-shadow: 3px 3px 3px blue;
 }
 
 
 .image{
-    width: 150px;
-    height:120px;
- 	padding:10px;
+    width: 200px;
+    height:180px;
+	 padding:10px;
+	 /* padding-top: 20px; */
    
 }
 
 .fighter {
 	font-family: calibri, sans-serif ;
-	color:blue;
+	color:white;
 	float: left;
 	text-align: center;
-	background-color: grey;
+	background-color: black;
 	border:2px solid black;
+	
 }
 
 .fightarea{
 	font-family: calibri, sans-serif ;
 	font-size: 20px;
-	color:blue;
+	color:white;
 	text-align: center;
 }
+/* .fighterName{
+	opacity:0.1;
+}
 
+.fighterHealth{
+	opacity:0.1;
+} */
 
+/* .yourFighter{
+	font-family: Death-Star, sans-serif;
+	font-size: 10px;
+	color:white;
+} */
 .yourOpponent {
 	font-family: calibri, sans-serif ;
-	color:blue;
-	background-color:grey;
+	color:white;
+	background-color:black;
 	text-align: center;
 	border:2px solid black;
 }
 
 
 
-.msg{
+/* .msg{
 	color:white;
-}
+	font-family: Death-Star, sans-serif;
+	text-shadow: 3px 3px 3px green;
+} */
 
 .fightBtn{
 	background-image : url(../images/lightsaber.jpg) ;
@@ -93,12 +109,13 @@ body {
 	font-size: 30px;
 }
 
+
 .opponent {
 	font-family: calibri, sans-serif ;
-	color:blue;
+	color:white;
 	float: left;
 	text-align: center;
-	background-color:rgb(226, 68, 10);
+	background-color: black;
 	border:2px solid black;
 }
 
@@ -107,7 +124,12 @@ body {
    
 }
 .opponent:hover{
-    border:4px solid red;
+    border:4px solid blue;
    
 }
+.yourOpponent:hover{
+    border:4px solid blue;
+   
+}
+
 
