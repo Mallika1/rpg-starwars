@@ -130,7 +130,7 @@ function modifyUI ()
     $("#mainHeading").css("font-size" ,"50px");
     $("#opponents").css("margin-top" , "10px");
     $("#opponents").append ( '<h3 class="title">Select Your Opponent</h3>');
-    $(".title").css("font-size" ,"20px");
+    $(".title").css("font-size" ,"30px");
     for(let i =0; i<fightersArr.length; i++)
         {
          let $opponentDiv = $('<div class="opponent">');
