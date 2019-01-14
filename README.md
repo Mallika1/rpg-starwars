@@ -4,7 +4,7 @@ Star Wars RPG
 Star Wars Themed role playing game created with JavaScript, jQuery, HTML and CSS.
 
 
-![Alt Text](https://mallika1.github.io/unit-4-game/assets/images/sw_image.JPG)
+![Alt Text](https://mallika1.github.io/unit-4-game/assets/images/star_wars.jpg)
 
 How it works: 
 
