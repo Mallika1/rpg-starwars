@@ -138,9 +138,9 @@ function modifyUI ()
          $opponentDiv.attr('data_health', fightersArr[i].health);
          $opponentDiv.attr('data_name', fightersArr[i].name);
        
-       
-         $opponentDiv.append(fightersArr[i].image); 
          $opponentDiv.append('<h5 class="opponentName">'+fightersArr[i].name);
+         $opponentDiv.append(fightersArr[i].image); 
+         
          $opponentDiv.append('<h5 class="opponentHealth">'+fightersArr[i].health);
          
          $("#opponents").append($opponentDiv); 
@@ -264,15 +264,16 @@ function constructGamePage()
 {
     $(".fighters"). css("margin-top", "60px");
     $(".fighters").append ( '<h3 class="title">Select Your Fighter</h3>');
+    
     for(let i =0; i<fightersArr.length; i++)
         {
          let $fighterDiv = $('<div class="fighter">');
          $fighterDiv.attr('data_attack', fightersArr[i].attack);
          $fighterDiv.attr('data_health', fightersArr[i].health);
          $fighterDiv.attr('data_fighterno', fightersArr[i].fighterNo);
-         
-         $fighterDiv.append(fightersArr[i].image); 
          $fighterDiv.append('<h5 class="fighterName">'+fightersArr[i].name);
+         $fighterDiv.append(fightersArr[i].image); 
+        
          $fighterDiv.append('<h5 class="fighterHealth">'+fightersArr[i].health);
          
         $(".fighters").append($fighterDiv); 
