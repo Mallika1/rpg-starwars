@@ -3,12 +3,6 @@
     src: url('../fonts/death-star/Death_Star.otf');
 }
 
-/* @font-face {
-    font-family: The_Dreamer;
-    src: url('../fonts/billy-argel_the-dreamer/THEDREAM_TRIAL.otf');
-} */
-
-
 body {
     font-family: 'Roboto', 'sans-serif';
     display:block;
@@ -30,8 +24,6 @@ body {
 	font-family: Death-Star, sans-serif;
 	font-size: 30px;
 	color:white;
-	/* font-family: The_Dreamer, sans-serif; */
-	/* text-decoration: underline; */
 	text-shadow: 3px 3px 3px blue;
 }
 
@@ -40,7 +32,6 @@ body {
 	font-size: 20px;
 	color:white;
 	font-family: Death-Star ,The_Dreamer, sans-serif;
-	/* text-decoration: underline; */
 	text-shadow: 3px 3px 3px blue;
 }
 
@@ -49,7 +40,7 @@ body {
     width: 180px;
     height:150px;
 	 padding:20px;
-	 /* padding-top: 20px; */
+
    
 }
 
@@ -58,9 +49,7 @@ body {
 	color:white;
 	float: left;
 	text-align: center;
-	/* background-color: black; */
-	/* border:2px solid black; */
-	
+
 }
 
 .fightarea{
@@ -69,40 +58,21 @@ body {
 	color:white;
 	text-align: center;
 }
-/* .fighterName{
-	opacity:0.1;
-}
 
-.fighterHealth{
-	opacity:0.1;
-} */
-
-/* .yourFighter{
-	font-family: Death-Star, sans-serif;
-	font-size: 10px;
-	color:white;
-} */
 .yourOpponent {
 	font-family: calibri, sans-serif ;
 	color:white;
 	background-color:black;
 	text-align: center;
-	/* border:2px solid black; */
+	
 }
 
-
-
-/* .msg{
-	color:white;
-	font-family: Death-Star, sans-serif;
-	text-shadow: 3px 3px 3px green;
-} */
 
 .fightBtn{
 	background-image : url(../images/lightsaber.jpg) ;
 	background-size: 100%;
-	width:100px;
-	height:60px;
+	width:60px;
+	height:40px;
 	margin-top:100px;
 	font-weight:bolder;
 	color:white;
@@ -115,8 +85,7 @@ body {
 	color:white;
 	float: left;
 	text-align: center;
-	/* background-color: black; */
-	/* border:2px solid black; */
+
 }
 
 .fighter:hover{
