@@ -57,7 +57,7 @@ function selectFighter(){
     $(".fighter").on("click", function()
     {
         if(fighterSelected) return;
-        $("#mainHeading").css("font-size" ,"30px");
+        $("#mainHeading").css("font-size" ,"50px");
             $yourFighter =  $(this);
             $(".fighters").css("margin-top" , "0px");
             $(".fighters").empty();
@@ -127,7 +127,7 @@ function fightBlink(){
 
 function modifyUI () 
 {
-    $("#mainHeading").css("font-size" ,"30px");
+    $("#mainHeading").css("font-size" ,"50px");
     $("#opponents").css("margin-top" , "10px");
     $("#opponents").append ( '<h3 class="title">Select Your Opponent</h3>');
     $(".title").css("font-size" ,"20px");
